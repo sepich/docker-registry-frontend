@@ -35,9 +35,8 @@ RUN apt-get -y install \
       nodejs-legacy \
       npm \
       --no-install-recommends
-RUN git config --global url."https://".insteadOf git://
-# Avoid this: "Problem with the SSL CA cert (path? access rights?)"
-RUN git config --global http.sslVerify false
+RUN git config --global url."https://".insteadOf git:// \
+    && git config --global http.sslVerify false
 
 ############################################################
 # Create start script
