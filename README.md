@@ -18,6 +18,8 @@ The `docker-registry-frontend` is a browser-based solution for browsing and modi
 
 ***TO PULL A VERSION OF THIS BRANCH FROM THE DOCKER HUB, MAKE SURE YOU PULL AND RUN ```konradkleine/docker-registry-frontend:v2```***
 
+[![](https://badge.imagelayers.io/konradkleine/docker-registry-frontend:master.svg)](https://imagelayers.io/?images=konradkleine/docker-registry-frontend:master 'Get your own badge on imagelayers.io')
+
 # Features
 
 For a list of all the features, please see the [Wiki][features]. Note, that currently the Wiki pages still refer to version 1 of this frontend.
