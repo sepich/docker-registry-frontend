@@ -42,7 +42,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "server": "grunt serve",
+    "start": "grunt serve",
     "postinstall": "bower install",
     "pretest": "npm install",
     "test": "karma start test/karma.conf.js",

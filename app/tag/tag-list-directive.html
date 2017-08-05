@@ -11,15 +11,11 @@
     <thead>
       <tr>
         <th ng-hide="appMode.browseOnly"></th>
-        <th ng-class="{strike: deleted}"><span class="glyphicon glyphicon-tag"></span> Tag</th>
-        <th><span class="glyphicon glyphicon-qrcode"></span> Image ID</th>
-        <th><span class="glyphicon glyphicon-compressed"></span> Size (MB)</th>
-      </tr>
-      <tr>
-        <th ng-hide="appMode.browseOnly"></th>
-        <th>
+        <th ng-class="{strike: deleted}"  style="white-space: nowrap;">
           <input class="input-sm form-control" placeholder="Filter tags on this page" type="search" ng-model="search.name"/>
         </th>
+        <th><span class="glyphicon glyphicon-qrcode"></span> Image ID</th>
+        <th style="white-space: nowrap;"><span class="glyphicon glyphicon-compressed"></span> Size</th>
       </tr>
     </thead>
     <tbody>
@@ -31,7 +27,7 @@
           <a ng-bind-html="tag.name" href="tag/{{repository}}/{{tag.name}}">{{tag.name}}</a>
         </td>
         <td><span ng-bind-html="tag.details.imageId | limitTo: 12"></span></td>
-        <td>{{tag.details.size / 1024 / 1024 | number: 2}}</td>
+        <td style="white-space: nowrap;">{{tag.details.size / 1024 / 1024 | number: 2}} Mb</td>
       </tr>
     </tbody>
   </table>
