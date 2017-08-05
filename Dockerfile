@@ -32,7 +32,7 @@ RUN echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache
 RUN mkdir -p  $SOURCE_DIR/dist \
               $SOURCE_DIR/app \
               $SOURCE_DIR/test \
-              $SOURCE_DIR/.git 
+              $SOURCE_DIR/.git
 
 # Add dirs
 ADD app $SOURCE_DIR/app
@@ -111,7 +111,5 @@ ADD Dockerfile /root/Dockerfile
 
 # Exposed ports
 EXPOSE 80 443
-
-VOLUME ["/etc/apache2/server.crt", "/etc/apache2/server.key"]
 
 CMD $START_SCRIPT
